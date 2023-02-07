@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+  height: 100vh; /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+.slider-top,
+.slider-bottom {
+  width: 50vw;
+}
+
+/*　背景画像設定　*/
+
+.slider-item01 {
+  background: url(../images/image025.jpg);
+}
+
+.slider-item02 {
+  background: url(../images/image035.jpg);
+}
+
+.slider-item03 {
+  background: url(../images/image029.jpg);
+}
+
+.slider-item04 {
+  background: url(../images/image001.jpg);
+}
+
+.slider-item05 {
+  background: url(../images/image012.jpg);
+}
+
+.slider-item06 {
+  background: url(../images/image037.jpg);
+}
+
+.slider-item {
+  width: 50%; /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height: 100vh; /*各スライダーの縦幅を画面の高さの半分（50vh）にする*/
+  background-repeat: no-repeat; /*背景画像をリピートしない*/
+  background-position: center; /*背景画像の位置を中央に*/
+  background-size: cover; /*背景画像が.slider-item全体を覆い表示*/
+}
+
+/*========= レイアウトのためのCSS ===============*/
+.slider ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shop_name {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: aliceblue;
+  z-index: 2;
+  font-family: "Aboreto", cursive;
+  letter-spacing: 5px;
+}
+.shop_tokyo {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: aliceblue;
+  font-family: "Aboreto", cursive;
+  z-index: 2;
+  letter-spacing: 5px;
+}
+.media_area {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  color: aliceblue;
+  z-index: 99;
+}
+.media_area img {
+  width: 40px;
+  margin-left: 10px;
+}
+.media_area img:hover {
+  transform: scale(1.5);
+  transition: all 0.6s ease;
+}

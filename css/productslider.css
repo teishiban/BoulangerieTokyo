@@ -1,0 +1,81 @@
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider1 {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 80px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.slider1 img {
+  width: 300px; /*スライダー内の画像を横幅100%に*/
+  height: auto;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.slider1 p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider1 .slick-slide1 {
+  margin: 0 10px;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev1,
+.slick-next1 {
+  position: absolute; /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer; /*マウスカーソルを指マークに*/
+  outline: none; /*クリックをしたら出てくる枠線を消す*/
+  border-top: 5px solid rgb(152, 128, 128); /*矢印の色*/
+  border-right: 5px solid rgb(152, 128, 128); /*矢印の色*/
+  height: 30px;
+  width: 30px;
+}
+
+.slick-prev1 {
+  /*戻る矢印の位置と形状*/
+  left: -5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next1 {
+  /*次へ矢印の位置と形状*/
+  right: -5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 10px; /*ドットボタンのサイズ*/
+  height: 10px; /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc; /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+  background: rgb(218, 101, 101); /*ドットボタンの現在地表示の色*/
+}
